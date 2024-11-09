@@ -61,3 +61,31 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## A free repository for community
 components using Tailwind CSS
 Navigate to `https://www.creative-tim.com/twcomponents`
+
+###  Instala Dependencias Requeridas para Karma
+Run `npm install --save-dev karma karma-jasmine jasmine-core karma-chrome-launcher karma-jasmine-html-reporter karma-coverage @angular-devkit/build-angular
+
+`
+### . Ajusta angular.json para Apuntar a karma.conf.js
+````
+"test": {
+  "builder": "@angular-devkit/build-angular:karma",
+  "options": {
+    "main": "src/test.ts",
+    "polyfills": "src/polyfills.ts",
+    "tsConfig": "src/tsconfig.spec.json",
+    "karmaConfig": "src/karma.conf.js",
+    "assets": ["src/favicon.ico", "src/assets"],
+    "styles": ["src/styles.css"],
+    "scripts": []
+  }
+}
+````
+
+
+
+####
+https://angular.dev/guide/testing/services#testing-http-services
+https://angular.dev/guide/http/testing#expecting-and-answering-requests
+https://angular.dev/guide/http/testing#expecting-and-answering-requests
+https://angular.dev/guide/testing
